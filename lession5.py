@@ -41,11 +41,20 @@ lớn hơn 8 ký tự, bao gồm cả chữ vào số. nếu không có yêu c�
 
 """
 
-month = int(input("Nhập tháng: "))
-month_31_days = [1,3,5,7,8,10,12]
+user_name = input("Nhập tên đăng nhập: ")
+password = input("Nhập mật khẩu: ")
+email = input("Nhập email: ")
 
-if month in month_31_days:
-    print("Đây là tháng có 31 ngày")
+while "@" not in email and "." not in email:
+    print("Email không hợp lệ")
+    email = input("Nhập email: ")
+
+confirm_password = input("Nhập lại mật khẩu: ")
+# khi mà confirm_password không bằng password => print(lỗi) => viết lại input confirm_password để nhập lại
+while confirm_password != password:
+    print("Mật khaus không khợp")
+    confirm_password = input("Nhập lại mật khẩu: ")
+
 
 
 
